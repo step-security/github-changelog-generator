@@ -4,6 +4,6 @@ COPY config /app/config/
 COPY build.gradle settings.gradle gradle.properties /app/
 RUN cd /app && gradle -Dorg.gradle.welcome=never --no-daemon bootJar
 
-FROM ghcr.io/bell-sw/liberica-openjre-debian:17.0.10-13@sha256:645e99e736950dec7c37994ebd5d0d9f26b7f62ed8af7310b040872a69e84f19
+FROM ghcr.io/bell-sw/liberica-openjre-debian:25.0.2-12@sha256:0381085ca2f80495c33e3060e9945099371854550c8ade4a114aa9217db9f72c
 COPY --from=build /app/build/libs/github-changelog-generator.jar /opt/action/github-changelog-generator.jar
 ENTRYPOINT ["java", "-jar", "/opt/action/github-changelog-generator.jar"]
