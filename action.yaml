@@ -19,7 +19,7 @@ inputs:
     default: changelog.md
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/step-security/github-changelog-generator:v0.0.2@sha256:bae4c01cdb9edee14b52104342ec4f9f80c859751328f6df798f6a2978cbc732' # v0.0.2
   args:
     - ${{ inputs.milestone }}
     - ${{ inputs.changelog-file }}
