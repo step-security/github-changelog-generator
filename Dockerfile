@@ -4,7 +4,7 @@ COPY config /app/config/
 COPY build.gradle settings.gradle gradle.properties /app/
 RUN cd /app && gradle -Dorg.gradle.welcome=never --no-daemon bootJar
 
-FROM ghcr.io/bell-sw/liberica-openjre-alpine:17.0.18-10@sha256:4506dae61e61ef9e1350dd3c1e7b54d50e8f0b4614798664366abedbdf01086a
+FROM ghcr.io/bell-sw/liberica-openjre-alpine:25-37@sha256:218ff7542fc2e54b984cab13eac969f447365b55b053e9ec91f5a90415451f1a
 RUN apk add --no-cache \
     "libcrypto3=3.5.7-r0" \
     "libssl3=3.5.7-r0" \
