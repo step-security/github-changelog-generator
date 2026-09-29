@@ -1,4 +1,4 @@
-FROM gradle:8.6-jdk17-alpine@sha256:87f40d50d0015236f5aa95d13399508d70e44bc3d97f3bb80efe9a942957825b AS build
+FROM gradle:9.8-jdk17-alpine@sha256:eaba124debec2bfd0e03d38f9f49409b4b739d6fbda0c5db999451d23d8b132b AS build
 COPY src /app/src/
 COPY config /app/config/
 COPY build.gradle settings.gradle gradle.properties /app/
